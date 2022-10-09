@@ -1,0 +1,200 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "interview prep hack",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "Hola",
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "InterviewPrepHack",
+                    "slots": [
+                        {
+                            "name": "types_of_questions",
+                            "type": "types_of_questions",
+                            "samples": [
+                                "{types_of_questions} questions",
+                                "{types_of_questions}",
+                                "questions for interviewers",
+                                "self-awareness questions",
+                                "motivation questions",
+                                "Teamwork questions",
+                                "leadership questions",
+                                "behavioural questions"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "open interview prep hack",
+                        "open interviewprephack",
+                        "Interview prep hack",
+                        "interview prep questions",
+                        "Interview prep",
+                        "For {types_of_questions} questions",
+                        "interview questions",
+                        "internship questions",
+                        "Behavioural questions",
+                        "mock questions for {types_of_questions}",
+                        "Mock interview"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "types_of_questions",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Management"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Questions for interviewers"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Leadership"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Adaptability"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Teamwork"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Prioritization and time management"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Conflict resolution"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Motivation and values"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Self-awareness"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "InterviewPrepHack",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "types_of_questions",
+                            "type": "types_of_questions",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1523317763147.882234096209"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.1523317763147.882234096209.1350726693652",
+                                    "values": [
+                                        "Questions for interviewers",
+                                        "Leadership",
+                                        "Self-awareness",
+                                        "Motivational",
+                                        "Teamwork",
+                                        "Behavioral "
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Slot.Validation.1523317763147.1081713483706.701730510810",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "sounds good"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1523317763147.882234096209",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what type of questions do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "do you want behavioural or teamwork or leadership questions?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What kind of questions do you want?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1523317763147.882234096209.1350726693652",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Sounds good, Here is your question"
+                    }
+                ]
+            }
+        ]
+    }
+}
