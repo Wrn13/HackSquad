@@ -1,0 +1,18 @@
+# Pseudocode
+# Introductory statements
+
+# Initiate Alexa
+# Ask for Mock Interview
+
+# Alexa states categories, User responds with a category name.
+
+# Alexa asks for the number of questions, user responds.
+
+# Randomly select those numbers of questions.
+
+# Loop: Ask question. Wait until user says next question or skip. In which case alexa reads next quesiton until
+# reach end of number of questions or user says stop. 
+
+# More to this Idea
+# Email file which Alexa parses for other interview quesitons which alexa can ask you after entering
+# them into her database as a separate table. Which she can ask questions from that database of questions. 
